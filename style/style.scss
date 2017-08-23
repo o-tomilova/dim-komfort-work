@@ -1,5 +1,8 @@
 $sect-padding-small: 2%;
 $sect-padding-large: 6%;
+$main-green: #00B400;
+$main-yellow: #FFCC00;
+
 
 * {
   font-family: 'Roboto', sans-serif;
@@ -11,11 +14,14 @@ $sect-padding-large: 6%;
 
 a {
 	text-decoration: none;
-	color: #000;
 }	
 h2 {
 	margin: 0;
 	font-size: 24px;
+	font-family: Roboto, sans-serif;
+	line-height: 18px;
+	font-weight: 400;
+	color: #333;
 }
 
 .site-wrap {
@@ -74,6 +80,12 @@ h2 {
 			float: left;
 			a {
 				display: block;
+				img {
+					opacity: 0.75;
+					&:hover {
+						opacity: 1;
+					}
+				}
 			}
 		}
 		.nl-phones {
@@ -94,7 +106,7 @@ h2 {
 		float: left;
 		border-left: 1px solid #ccc;
 		padding: 0 20px;
-		color: grey;
+		color: #333;
 		line-height: 18px;
 		font-size: 14px;
 
@@ -113,7 +125,7 @@ h2 {
 		}
 		i {
 			padding: 5px 15px;
-			color: #76da44;
+			color: $main-green;
 		}
 		div {
 			float: left;
@@ -128,7 +140,7 @@ h2 {
 				border-right: 1px solid #ccc;
 				padding: 5px 15px; 
 			&:hover {
-					border-bottom: 3px solid #76da44;
+					border-bottom: 3px solid $main-green;
 				}
 			}
 			i {
@@ -159,6 +171,11 @@ h2 {
 		width: 50%; 
 		float: right;
 		text-align: right;
+		p{
+			font-weight: 300;
+			font-size: 16px;
+			line-height: 18px;
+		}
 	}
 }
 
@@ -177,7 +194,7 @@ h2 {
 			&:hover {
 				width: 50px;
 				height: 40px;
-				background-color: #76da44;
+				background-color: $main-green;
 			}
 
 		img {
@@ -206,9 +223,10 @@ h2 {
 	text-align: right;
 	a {
 		margin: 0;
+		font-weight: 300;
 		font-size: 14px;
 		line-height: 260%;
-		color: #76da44;
+		color: $main-green;
 		text-decoration: underline;
 	}
 }
@@ -258,8 +276,6 @@ h2 {
 	}
 	img {
 		width: 100%;
-		// margin-bottom: -5px;
-		//margin-top: 20px;
 	}
 	.cat-overlay {
 		position: absolute;
@@ -270,8 +286,9 @@ h2 {
 		height: 25%;
 		
 		h3 {
-			font-size: 16px;
-			font-weight: bolder;
+			font-size: 18px;
+			line-height: 18px;
+			font-weight: 400;
 			color: white;
 			text-transform: uppercase;
 		}
@@ -279,7 +296,7 @@ h2 {
 
 	&:hover {
 		.cat-overlay {
-			background-color: orange;
+			background-color: $main-yellow;
 			h3 {
 				color: #000;
 			}
@@ -297,13 +314,16 @@ h2 {
 				.title {
 				display: inline-block;
 				min-width: 70px; 
+				font-weight: 300;
+				font-size: 30px;
+				line-height: 18px;
 			}
 			.line {
 				display: inline-block;
-				width: 28%;
+				width: 25%;
 				height: 2px;
 				vertical-align: middle;
-				background-color: orange;
+				background-color: $main-yellow;
 				margin: 0 30px;
 			}
 		}
@@ -333,31 +353,50 @@ h2 {
 			float: left;
 			padding: 20px;
 			text-align: center;	
+			color: #333;
 				img {
-					width: 40%;
+					width: 35%;
+					opacity: 0.9;
 				}
 				a {
 					text-decoration: underline;
 					color: #76da44;
+					font-weight: 300;
+					font-size: 14px;
+					line-height: 25px;
+				}
+				h3 {
+					font-weight: 300;
+					font-size: 18px;
+					line-height: 18px;
 				}
 				p {
 					text-align: justify;
+					font-weight: 300;
+					font-size: 16px;
+					line-height: 20px;
+
 				}
 		}
 	}
 	.promo-bottom {
 		padding-top: $sect-padding-small;
 		padding-bottom: $sect-padding-large;
-		background-color: lightgrey;
 	}
 
 }
 //----------- services block --------------
 .services {
 	background: url("../img/texture_concrete.gif");
+	color: #333;
 	h2 {
 		padding-left: 10%;
-		margin: 60px 0;
+		margin-top: $sect-padding-large;
+		margin-bottom: $sect-padding-large;
+		font-family: Roboto, sans-serif;
+		font-size: 30px;
+		line-height: 18px;
+		font-weight: 100;
 		}
 	.serv-list {
 		width: 49.99999%;
@@ -371,9 +410,9 @@ h2 {
 				margin-bottom: 60px;
 				padding-left: 10px;
 				&::before {
-				content: "";
-				display: table;
-				clear: both;
+					content: "";
+					display: table;
+					clear: both;
 				}
 				&::after {
 					content: "";
@@ -386,9 +425,10 @@ h2 {
 					float: left;
 					text-align: center;
 					img {
-						width: 75%;
+						width: 70%;
 						border-radius: 50%;
-						border: 1px solid gray;
+						border: 1px solid #333;
+						opacity: 0.5;
 					}
 				}
 					
@@ -399,6 +439,9 @@ h2 {
 					p {
 						margin: 0;
 						line-height: 150%;
+						font-size: 15px;
+						line-height: 20px;
+						font-weight: 300;
 					}
 				}
 			}
@@ -419,7 +462,7 @@ h2 {
 	background: url("../img/texture_wood.jpg");
 	color: #fff;
 	.forms-wrap {
-		background-color: green;
+		background-color: rgba(57, 181, 74, 0.7);
 	}
 }
 .forms, .works {
@@ -441,26 +484,24 @@ h2 {
 }
 
 .forms {
-	display: block;
-	padding: $sect-padding-small 0; 
+	display: block; 
 }
-
 .form-container {
-	width: 24.99999%;
-	height: 100px;
 	float: left;
-	padding: 0 20px;
+	width: 24.99999%;
+	padding: 1.5% 30px;
 	text-align: center;
 	&::before {
-	content: "";
-	display: table;
-	clear: both;
+		content: "";
+		display: table;
+		clear: both;
 	}
 	&::after {
-	content: "";
-	display: table;
-	clear: both;
+		content: "";
+		display: table;
+		clear: both;
 	}
+
 	.fc-img {
 		width: 33.99999%;
 		float: left;
@@ -474,9 +515,23 @@ h2 {
 		padding-left: 20px;
 		text-align: left;
 		color: #fff;
-		vertical-align: middle;
-		line-height: 200%;
+		font-weight: 400;
+		font-size: 15px;
+		line-height: 18px;
+		margin: 10% 0;
 	}
+}
+.fc-one {
+	background-color: rgba(57, 181, 74, 0.5);
+}
+.fc-two {
+	background-color: rgba(57, 181, 74, 0.9);
+}
+.fc-three {
+	background-color: rgba(57, 181, 74, 0.6);
+}
+.fc-four {
+	background-color: rgba(57, 181, 74, 0.3);
 }
 
 .works {
@@ -489,7 +544,6 @@ h2 {
 		display: table;
 		clear: both;
 	}
-
 	&::after {
 		content: "";
 		display: table;
@@ -498,6 +552,9 @@ h2 {
 	.wt-left, .wt-right {
 		width: 49.99999%;
 		float: left;
+		h2 {
+			color: #fff;
+		}
 	}
 	.wt-right {
 		text-align: right;
@@ -505,7 +562,7 @@ h2 {
 			margin: 0;
 			font-size: 14px;
 			line-height: 260%;
-			color: green;
+			color: $main-green;
 			text-decoration: underline;
 		}
 	}
@@ -538,6 +595,13 @@ h2 {
 			img {
 				width: 100%;
 			}
+			p {
+				font-family: Roboto, sans-serif;
+				font-size: 15px;
+				font-weight: 300;
+				line-height: 18px;
+				font-style: italic;
+			}
 		}
 }
 
@@ -547,6 +611,9 @@ h2 {
 		@extend .works-top;
 		.at-left {
 			@extend .wt-left;
+			h2 {
+				color: #333;
+			}
 		}
 		.at-right {
 			@extend .wt-right;
@@ -554,7 +621,7 @@ h2 {
 				margin: 0;
 				font-size: 14px;
 				line-height: 260%;
-				color: green;
+				color: $main-green;
 				text-decoration: underline;
 			}
 		}
@@ -563,6 +630,9 @@ h2 {
 		@extend .works-items;
 		.articles-item {
 			@extend .works-item;
+			p {
+				color: #333;
+			}
 			&:hover {
 				.underline {
 					width: 100%;
@@ -572,13 +642,18 @@ h2 {
 				margin-top: 5%;
 				width: 50%;
 				height: 2px;
-				background-color: orange;
+				background-color: $main-yellow;
 				transition: width .5s ease;
 			}
 			img {
 				width: 100%;
 			}
 		}
+	}
+	.articles-bottom {
+		font-weight: 300;
+		font-size: 20px;
+		line-height: 18px;
 	}
 }
 .seo-info {
@@ -589,12 +664,19 @@ h2 {
 		width: 49.99999%;
 		float: left;
 		padding: 0 40px;
+
 		img {
 			width: 100%;
+			opacity: 0.5;
 		}
 		p {
 			padding-top: 40px;
 			text-align: justify;
+			font-family: Roboto, sans-serif;
+			font-weight: 300;
+			font-size: 16px;
+			line-height: 22px;
+			color: #333;
 		}
 	}
 }   
@@ -602,12 +684,20 @@ h2 {
 .footer {
 	padding-top: $sect-padding-large;
 	padding-bottom: $sect-padding-small;
-	background-color: #101010;
+	background-color: #404040;
 	font-size: 18px;
 	color: #ccc;
 	a {
 		color: #ccc;
 		display: block;
+		font-weight: 100;
+		font-size: 15px;
+		line-height: 18px;
+	}
+	p {
+		font-weight: 100;
+		font-size: 15px;
+		line-height: 18px;
 	}
 	.footer-container {
 		width: 24.99999%;
@@ -621,23 +711,36 @@ h2 {
 		}
 		ul {
 			margin: 0;
+			a {
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 25px;
+			}
 		}
 	}
 	.footer-container-1 {
-	
+		.logo-bw {
+			opacity: 0.6;
+			&:hover {
+				opacity: 0.9;
+			}
+		}
 		div {
 			width: 30px;
 			height: 30px;
 			border: 1px solid #ccc;
 			border-radius: 100%;
-			line-height: 30px;
 			text-align: center;
-			font-size: 16px;
 			float: left;
 			margin-right: 10px;
 			a {
 				width: 100%;
 				height: 100%;
+				i {
+					font-size: 16px;
+					line-height: 28px;
+				}
+				
 			}
 		}
 	}
@@ -648,10 +751,10 @@ h2 {
 				list-style-type: none;
 				margin-left: -20px;
 			}
-
 		}
 	}
 	.footer-container-3 {
+		padding-left: 4.5%;
 		ul {
 			padding-left: 0;
 			li {
@@ -659,5 +762,13 @@ h2 {
 
 			}
 		}
+	}
+	.footer-phone {
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 24px;
+	}
+	.copy {
+		font-size: 12px;
 	}	
 }   
