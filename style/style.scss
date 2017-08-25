@@ -2,6 +2,8 @@ $sect-padding-small: 2%;
 $sect-padding-large: 6%;
 $main-green: #00B400;
 $main-yellow: #FFCC00;
+$input-bg: #f5f5f5;
+$input-border: #bfbfbf;
 
 
 * {
@@ -772,3 +774,128 @@ h2 {
 		font-size: 12px;
 	}	
 }   
+
+// separate-forms 
+.sep-form {
+	&::before {
+		content: "";
+		display: block;
+		clear: both;
+	}
+	&::after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+
+	width: 500px;
+	height: 380px;
+	margin: auto;
+	padding: 20px;
+
+	h2{
+		font-size: 20px;
+		width: 90%;
+		float: left;
+	}
+}
+.sft-right {
+		width: 10%;
+		float: left;
+		text-align: right;
+		i {
+			display: inline-block;
+			font-size: 18px;
+			color: grey;
+			cursor: pointer;
+		}
+	}
+.sep-form-left {
+	width: 300px;
+	float: left;
+		form {
+			input {
+				display: block;
+				margin: 20px 0;
+				padding: 0;
+				width: 281px;
+				height: 30px;
+				border: 1px solid $input-border;
+				background-color: $input-bg;
+				font-style: italic;
+				padding-left: 15px;
+
+			}
+			textarea {
+				width: 281px;
+				height: 70px;
+				max-height: 70px;
+				margin: 20px 0;
+				resize: none;
+				font-style: italic;
+				padding-left: 15px;
+				border: 1px solid $input-border;
+				background-color: $input-bg;
+			}
+			select {
+				width: 300px;
+				height: 30px;
+				font-style: italic;
+				padding-left: 15px;
+				border: 1px solid $input-border;
+				background-color: $input-bg;
+				color: grey;
+			}
+			input[type="submit"], input[type="reset"] {
+				width: 138px;
+				height: 40px;
+				display: inline-block;
+				margin-top: 0;
+				border: none;
+				border-radius: 3%;
+				outline: none;
+				font-size: 16px;
+				font-weight: 400;
+				color: #fff;
+				cursor: pointer;
+
+
+			}
+			input[type="submit"] {
+				margin-right: 20px;
+				font-style: normal;
+				padding-left: 0;
+				background-color: $main-green;
+			}
+			input[type="reset"] {
+				font-style: normal;
+				padding-left: 0;
+				background-color: grey;
+			} 
+		}
+}
+.sep-form-right {
+	width: 200px;
+	float: left;
+	padding-bottom: 20px;
+	p {
+		height: 70px;
+		margin-top: 18px;
+		margin-left: 20px;
+		font-size: 12px;
+		text-align: justify;
+		color: grey;
+	}
+	img {
+		width: 200px;
+		height: 213px;
+		margin-left: 20px;
+		border-bottom: 1px solid $input-border;
+	}
+}
+
+#form-call {
+	img {
+		height: 64px;
+	}
+}

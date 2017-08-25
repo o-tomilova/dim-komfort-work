@@ -575,4 +575,105 @@ h2 {
   .footer .copy {
     font-size: 12px; }
 
+.sep-form {
+  width: 500px;
+  height: 380px;
+  margin: auto;
+  padding: 20px; }
+  .sep-form::before {
+    content: "";
+    display: block;
+    clear: both; }
+  .sep-form::after {
+    content: "";
+    display: block;
+    clear: both; }
+  .sep-form h2 {
+    font-size: 20px;
+    width: 90%;
+    float: left; }
+
+.sft-right {
+  width: 10%;
+  float: left;
+  text-align: right; }
+  .sft-right i {
+    display: inline-block;
+    font-size: 18px;
+    color: grey;
+    cursor: pointer; }
+
+.sep-form-left {
+  width: 300px;
+  float: left; }
+  .sep-form-left form input {
+    display: block;
+    margin: 20px 0;
+    padding: 0;
+    width: 281px;
+    height: 30px;
+    border: 1px solid #bfbfbf;
+    background-color: #f5f5f5;
+    font-style: italic;
+    padding-left: 15px; }
+  .sep-form-left form textarea {
+    width: 281px;
+    height: 70px;
+    max-height: 70px;
+    margin: 20px 0;
+    resize: none;
+    font-style: italic;
+    padding-left: 15px;
+    border: 1px solid #bfbfbf;
+    background-color: #f5f5f5; }
+  .sep-form-left form select {
+    width: 300px;
+    height: 30px;
+    font-style: italic;
+    padding-left: 15px;
+    border: 1px solid #bfbfbf;
+    background-color: #f5f5f5;
+    color: grey; }
+  .sep-form-left form input[type="submit"], .sep-form-left form input[type="reset"] {
+    width: 138px;
+    height: 40px;
+    display: inline-block;
+    margin-top: 0;
+    border: none;
+    border-radius: 3%;
+    outline: none;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    cursor: pointer; }
+  .sep-form-left form input[type="submit"] {
+    margin-right: 20px;
+    font-style: normal;
+    padding-left: 0;
+    background-color: #00B400; }
+  .sep-form-left form input[type="reset"] {
+    font-style: normal;
+    padding-left: 0;
+    background-color: grey; }
+
+.sep-form-right {
+  width: 200px;
+  float: left;
+  padding-bottom: 20px; }
+  .sep-form-right p {
+    height: 70px;
+    margin-top: 18px;
+    margin-left: 20px;
+    font-size: 12px;
+    text-align: justify;
+    color: grey; }
+  .sep-form-right img {
+    width: 200px;
+    height: 213px;
+    margin-left: 20px;
+    border-bottom: 1px solid #bfbfbf; }
+
+#form-call img {
+  height: 64px; }
+
 /*# sourceMappingURL=style.css.map */
