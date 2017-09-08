@@ -131,7 +131,7 @@ h4 {
 	width: 100%;
 	top: 0;
 	height: 80px;
-	z-index: 100;
+	z-index: 1000;
 	background-color: white;
 	box-shadow: 0 0 5px rgba(0,0,0,0.25);
 }
@@ -261,11 +261,25 @@ h4 {
 	}	
 }
 
+// -------------------- slider ---------------
 
 .header-slider {
-	margin-top: 80px;
+	margin-top: 60px;
 	width: 100%;
 	background-color: #128ad8;
+	p {
+		clear: both;
+		padding: 20px 0;
+	}
+
+	a {
+		border: 1px solid #fff;
+		color: #fff;
+		padding: 10px;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 }
 
 .slide {
@@ -301,6 +315,31 @@ h4 {
 		width: 90%;
 	}
 }
+
+.slider-title {
+	background-color: $main-yellow;
+	display: inline-block;
+	float: left;
+	margin: 0;
+	padding: 8px;
+	font-family: Roboto, sans-serif;
+	font-size: 40px;
+	font-weight: 400;
+}
+.slider-subtitle {
+	display: inline-block;
+	float: left;
+	clear: left;
+	background-color: #fff;
+	color: #128ad8;
+	margin: 0;
+	padding: 8px;
+	font-style: italic;
+}
+
+
+//--------------------------------------
+
 
 .header-bottom {
 	position: relative;
@@ -740,7 +779,7 @@ cursor: pointer;
 	}
 } 
 
-//  -------------------------articles -----
+//  -------------------------articles ----------
 
 .at-left {
 	width: 49.99999%;
@@ -807,7 +846,7 @@ cursor: pointer;
 		}
 } 
 
-// ------------------------ seo info -----
+// ------------------------ seo info ----------
 
 .seo-info {
 	padding-top: $padding-large;
@@ -835,7 +874,7 @@ cursor: pointer;
 }
 
 
-//------------------------footer -----------
+//-------------------- footer ---------------
 
 .footer {
 	padding-top: $padding-middle;
@@ -845,10 +884,6 @@ cursor: pointer;
 	color: #ccc;
 	a {
 		color: #ccc;
-		// display: block;
-		// font-weight: 100;
-		// font-size: 15px;
-		// line-height: 18px;
 		&:hover {
 			color: #fff;
 		}
@@ -948,7 +983,7 @@ cursor: pointer;
 	font-size: 12px;
 }
 
-// ---------------- separate-forms --------
+// ---------------- separate-forms -----------
 .sep-form {
 	&::before {
 		content: "";
@@ -1072,7 +1107,7 @@ cursor: pointer;
 		height: 64px;
 	}
 }
-// ------------------- catalog-start ----------
+// ------------------- catalog-start -------------
 .header-line {
 	height: 10px;
 	background-color: rgb(255,204,0);
@@ -1143,6 +1178,8 @@ cursor: pointer;
 }
 .catalog-link-0 {
 	border-left: 0px solid $main-yellow;
+	background-color: transparent;
+	transition: all .1s ease;
 	font-size: 18px;
 	&:hover {
 		background-color: rgba(255,204,0, 0.3);
@@ -1177,6 +1214,8 @@ cursor: pointer;
 	margin-left: 20px;
 	font-size: 16px;
 	border-left: 0px solid $main-yellow;
+	background-color: transparent;
+	transition: all .1s ease;
 	&:hover {
 		background-color: rgba(255,204,0, 0.3);
 		border-left: 10px solid $main-yellow;
@@ -1208,6 +1247,8 @@ cursor: pointer;
 	margin-left: 40px;
 	font-size: 15px;
 	border-left: 0px solid $main-yellow;
+	background-color: transparent;
+	transition: all .1s ease;
 	&:hover {
 		background-color: rgba(255,204,0, 0.3);
 		border-left: 10px solid $main-yellow;
@@ -1326,7 +1367,7 @@ cursor: pointer;
 	padding: 0 2%;
 }
 
-// -------------- table --------------
+// ------------------ table -----------------
 .table {
 	td:nth-child(2), th:nth-child(2){
 		text-align: right;
@@ -1350,13 +1391,220 @@ cursor: pointer;
 }
 .table-order {
 	background-color: $main-green;
+	transition: all .2s ease;
 	border: none;
 	color: #fff;
 	margin-right: 10px;
+	&:hover {
+		background-color: $main-yellow;
+	}
 }
 
 .table-calculate {
 	background-color: transparent;
 	border: 2px solid $main-yellow;
+	transition: all .2s ease;
 	color: #333;
+	&:hover {
+		background-color: $main-yellow;
+		color: #fff;
+	}
+}
+
+//---------------------- side-menu ------------------
+
+.side-menu-bg {
+	width: 100%;
+	background-color: #000; 
+}
+
+.side-menu {
+	width: 300px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1000;
+	overflow-y: auto;
+	background-color: $main-green;
+	padding: 20px 2%;
+	
+	a {
+		float: left;
+		clear: both;
+		color: #fff;
+		font-size: 14px;
+		font-weight: 400;
+		margin: 10px 0;
+	}
+
+	hr {
+		float: left;
+		width: 100%;
+		clear: both;
+	}
+
+	div {
+		&::before {
+			content: "";
+			display: block;
+			clear: both;
+		}
+		&::after {
+			content: "";
+			display: block;
+			clear: both;
+		}
+	}	
+	
+	.side-menu-top {
+		width: 100%;
+		a {
+			float: left;
+			width: 50%;
+			font-weight: 400;
+			font-size: 16px;
+		}
+		span {
+			width: 50%;
+			float: right;
+			text-align: right;
+			color: #fff;
+			margin: 10px 0;
+			cursor: pointer;
+		}
+	}
+	.side-menu-cat-1 {
+		margin-left: 20px;
+	}
+
+	.side-menu-forms {
+		float: left;
+
+		a {
+			line-height: 24px;
+			vertical-align: middle;
+		}
+
+		i {
+			font-size: 24px; 
+			padding-right: 10px;
+			vertical-align: middle;
+		}
+		span {
+			vertical-align: middle;
+			font-weight: 400;
+		}
+	}
+
+	.side-menu-phones {
+		float: left;
+		a {
+			display: inline-block;
+			float: none;
+		}
+	}
+	.side-menu-social {
+		float: left;
+		margin-bottom: 10px;
+		div {
+			width: 30px;
+			height: 30px;
+			border: 1px solid #fff;
+			border-radius: 100%;
+			text-align: center;
+			float: left;
+			margin-right: 10px;
+			a {
+				display: block;
+				width: 100%;
+				height: 100%;
+				color: #fff;
+				margin: 0;
+				i {
+					font-size: 18px;
+					line-height: 28px;
+				}
+			}
+		}
+	}
+}
+
+//-------------------- contacts ----------------
+
+.header-picture {
+	img {
+		width: 100%;
+	}
+}
+
+.contact-info {
+	width: 50%;
+	float: left;
+	h2 {
+		font-weight: 700;
+	}
+
+	>div {
+		width: 50%;
+		float: left;
+		h3 {
+			font-size: 17px;
+			display: inline-block;
+			margin: 0;
+			padding: 8px 0;
+			border-bottom: 2px solid $main-yellow;
+		}
+		p {
+			margin: 3px 0;
+			font-size: 15px;
+		}
+		a {
+			color: #333;
+		}
+	}
+}
+
+.contacts-social {
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 10px; 
+	div {
+		width: 30px;
+		height: 30px;
+		border: 1px solid grey;
+		border-radius: 100%;
+		text-align: center;
+		float: left;
+		margin-right: 10px;
+		a {
+			display: block;
+			width: 100%;
+			height: 100%;
+			color: grey;
+			margin: 0;
+			i {
+				font-size: 18px;
+				line-height: 28px;
+			}
+		}
+	}
+}
+
+.contact-form {
+	width: 50%;
+	float: left;
+	height: 400px; // temp
+	background-color: pink; // temp
+}
+
+.google-map {
+	margin-top: $padding-small;
+	width: 100%;
+	height: 300px; // temp
+	background-color: #ccc; // temp
+
+	h2 {
+		text-align: center;
+	}
 }

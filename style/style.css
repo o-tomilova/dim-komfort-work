@@ -110,7 +110,7 @@ h4 {
   width: 100%;
   top: 0;
   height: 80px;
-  z-index: 100;
+  z-index: 1000;
   background-color: white;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
 }
@@ -249,9 +249,21 @@ h4 {
 }
 
 .header-slider {
-  margin-top: 80px;
+  margin-top: 60px;
   width: 100%;
   background-color: #128ad8;
+}
+.header-slider p {
+  clear: both;
+  padding: 20px 0;
+}
+.header-slider a {
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 10px;
+}
+.header-slider a:hover {
+  text-decoration: underline;
 }
 
 .slide {
@@ -286,6 +298,28 @@ h4 {
 }
 .slide-right img {
   width: 90%;
+}
+
+.slider-title {
+  background-color: #FFCC00;
+  display: inline-block;
+  float: left;
+  margin: 0;
+  padding: 8px;
+  font-family: Roboto, sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.slider-subtitle {
+  display: inline-block;
+  float: left;
+  clear: left;
+  background-color: #fff;
+  color: #128ad8;
+  margin: 0;
+  padding: 8px;
+  font-style: italic;
 }
 
 .header-bottom {
@@ -1086,6 +1120,8 @@ h4 {
 
 .catalog-link-0 {
   border-left: 0px solid #FFCC00;
+  background-color: transparent;
+  transition: all .1s ease;
   font-size: 18px;
 }
 .catalog-link-0:hover {
@@ -1118,6 +1154,8 @@ h4 {
   margin-left: 20px;
   font-size: 16px;
   border-left: 0px solid #FFCC00;
+  background-color: transparent;
+  transition: all .1s ease;
 }
 .catalog-link-1:hover {
   background-color: rgba(255, 204, 0, 0.3);
@@ -1149,6 +1187,8 @@ h4 {
   margin-left: 40px;
   font-size: 15px;
   border-left: 0px solid #FFCC00;
+  background-color: transparent;
+  transition: all .1s ease;
 }
 .catalog-link-2:hover {
   background-color: rgba(255, 204, 0, 0.3);
@@ -1272,15 +1312,204 @@ h4 {
 
 .table-order {
   background-color: #00B400;
+  transition: all .2s ease;
   border: none;
   color: #fff;
   margin-right: 10px;
+}
+.table-order:hover {
+  background-color: #FFCC00;
 }
 
 .table-calculate {
   background-color: transparent;
   border: 2px solid #FFCC00;
+  transition: all .2s ease;
   color: #333;
+}
+.table-calculate:hover {
+  background-color: #FFCC00;
+  color: #fff;
+}
+
+.side-menu-bg {
+  width: 100%;
+  background-color: #000;
+}
+
+.side-menu {
+  width: 300px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  overflow-y: auto;
+  background-color: #00B400;
+  padding: 20px 2%;
+}
+.side-menu a {
+  float: left;
+  clear: both;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 10px 0;
+}
+.side-menu hr {
+  float: left;
+  width: 100%;
+  clear: both;
+}
+.side-menu div::before {
+  content: "";
+  display: block;
+  clear: both;
+}
+.side-menu div::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.side-menu .side-menu-top {
+  width: 100%;
+}
+.side-menu .side-menu-top a {
+  float: left;
+  width: 50%;
+  font-weight: 400;
+  font-size: 16px;
+}
+.side-menu .side-menu-top span {
+  width: 50%;
+  float: right;
+  text-align: right;
+  color: #fff;
+  margin: 10px 0;
+  cursor: pointer;
+}
+.side-menu .side-menu-cat-1 {
+  margin-left: 20px;
+}
+.side-menu .side-menu-forms {
+  float: left;
+}
+.side-menu .side-menu-forms a {
+  line-height: 24px;
+  vertical-align: middle;
+}
+.side-menu .side-menu-forms i {
+  font-size: 24px;
+  padding-right: 10px;
+  vertical-align: middle;
+}
+.side-menu .side-menu-forms span {
+  vertical-align: middle;
+  font-weight: 400;
+}
+.side-menu .side-menu-phones {
+  float: left;
+}
+.side-menu .side-menu-phones a {
+  display: inline-block;
+  float: none;
+}
+.side-menu .side-menu-social {
+  float: left;
+  margin-bottom: 10px;
+}
+.side-menu .side-menu-social div {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  text-align: center;
+  float: left;
+  margin-right: 10px;
+}
+.side-menu .side-menu-social div a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  margin: 0;
+}
+.side-menu .side-menu-social div a i {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.header-picture img {
+  width: 100%;
+}
+
+.contact-info {
+  width: 50%;
+  float: left;
+}
+.contact-info h2 {
+  font-weight: 700;
+}
+.contact-info > div {
+  width: 50%;
+  float: left;
+}
+.contact-info > div h3 {
+  font-size: 17px;
+  display: inline-block;
+  margin: 0;
+  padding: 8px 0;
+  border-bottom: 2px solid #FFCC00;
+}
+.contact-info > div p {
+  margin: 3px 0;
+  font-size: 15px;
+}
+.contact-info > div a {
+  color: #333;
+}
+
+.contacts-social {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.contacts-social div {
+  width: 30px;
+  height: 30px;
+  border: 1px solid grey;
+  border-radius: 100%;
+  text-align: center;
+  float: left;
+  margin-right: 10px;
+}
+.contacts-social div a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: grey;
+  margin: 0;
+}
+.contacts-social div a i {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.contact-form {
+  width: 50%;
+  float: left;
+  height: 400px;
+  background-color: pink;
+}
+
+.google-map {
+  margin-top: 50px;
+  width: 100%;
+  height: 300px;
+  background-color: #ccc;
+}
+.google-map h2 {
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
